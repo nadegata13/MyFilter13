@@ -8,25 +8,43 @@
 import SwiftUI
 
 struct FilterContentView: View {
-    @State private var filterdImage: UIImage?
     @StateObject private var viewModel = FilterContenViewModel()
     var body: some View {
         NavigationView{
             ZStack{
-                if let filterdImage = filterdImage {
+                if let filterdImage = viewModel.filterdImage {
+                    
                     Image(uiImage: filterdImage)
+                        .resizable()
+                                                .aspectRatio(contentMode: .fit)
+
+                        .onTapGesture {
+                            withAnimation{
+                                viewModel.isShowBanner = true
+                            }
+                        }
                 } else {
                     EmptyView()
                 }
-                FilterBannerView()
+                FilterBannerView(isShowBanner: $viewModel.isShowBanner, applyingFilter: $viewModel.applyingFilter)
+
+
 
             }
             .navigationTitle("Filter APP")
             .navigationBarItems(trailing: HStack{
-                Button {} label: {
+                Button {
+                    viewModel.apply(.tapSaveIcon)
+                } label: {
                     Image(systemName: "square.and.arrow.down")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 30, height: 30)
                 }
-                Button{} label: {
+                Button{
+                    
+                viewModel.apply(.tappedActionSheet(selectType: .photoLibrary))
+                } label: {
                     Image(systemName: "photo")
                 }
             })
@@ -36,6 +54,12 @@ struct FilterContentView: View {
             }
             .actionSheet(isPresented: $viewModel.isShowActionSheet) {
                 actionSheet
+            }
+            .sheet(isPresented: $viewModel.isShowImagePickerView) {
+                ImagePicker(isShown: $viewModel.isShowImagePickerView, image: $viewModel.image, sourceType: viewModel.selectedSourceType)
+            }
+            .alert(isPresented: $viewModel.isShowAlert){
+                Alert(title: Text(viewModel.alertTitle))
             }
         }
     }

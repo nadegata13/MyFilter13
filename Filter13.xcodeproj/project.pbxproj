@@ -14,6 +14,8 @@
 		9119EAF8286A8AD80001D607 /* FilterContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9119EAF7286A8AD80001D607 /* FilterContentView.swift */; };
 		9119EAFA286A914C0001D607 /* FilterBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9119EAF9286A914C0001D607 /* FilterBannerView.swift */; };
 		9119EAFC286A93E90001D607 /* FilterContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9119EAFB286A93E90001D607 /* FilterContentViewModel.swift */; };
+		9119EAFE286E7D3E0001D607 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9119EAFD286E7D3D0001D607 /* ImagePicker.swift */; };
+		91A5F1002873CB4C00B6058A /* FilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5F0FF2873CB4C00B6058A /* FilterType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		9119EAF7286A8AD80001D607 /* FilterContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterContentView.swift; sourceTree = "<group>"; };
 		9119EAF9286A914C0001D607 /* FilterBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBannerView.swift; sourceTree = "<group>"; };
 		9119EAFB286A93E90001D607 /* FilterContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterContentViewModel.swift; sourceTree = "<group>"; };
+		9119EAFD286E7D3D0001D607 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		91A5F0FF2873CB4C00B6058A /* FilterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				9119EAF7286A8AD80001D607 /* FilterContentView.swift */,
+				9119EAFD286E7D3D0001D607 /* ImagePicker.swift */,
 				9119EAFB286A93E90001D607 /* FilterContentViewModel.swift */,
 			);
 			path = FilterBanner;
@@ -98,6 +103,7 @@
 		9119EAF3286A856A0001D607 /* CustomToolBar */ = {
 			isa = PBXGroup;
 			children = (
+				91A5F0FF2873CB4C00B6058A /* FilterType.swift */,
 			);
 			path = CustomToolBar;
 			sourceTree = "<group>";
@@ -194,9 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91A5F1002873CB4C00B6058A /* FilterType.swift in Sources */,
 				9119EAFA286A914C0001D607 /* FilterBannerView.swift in Sources */,
 				9119EAE6286A84CC0001D607 /* ContentView.swift in Sources */,
 				9119EAE4286A84CC0001D607 /* Filter13App.swift in Sources */,
+				9119EAFE286E7D3E0001D607 /* ImagePicker.swift in Sources */,
 				9119EAFC286A93E90001D607 /* FilterContentViewModel.swift in Sources */,
 				9119EAF8286A8AD80001D607 /* FilterContentView.swift in Sources */,
 			);
